@@ -1,0 +1,28 @@
+/* bugSolution.css */
+/* Correcting Inconsistent Unit Usage */
+.example1 {
+  width: calc(100% - 20px);
+}
+
+.example2 {
+  width: calc(100px + 10%); /* Fixed by making units consistent (all px or all %) */ 
+}
+
+/* Correcting Implicit Parent Dimensions */
+.parent {
+  width: 500px; /* Explicitly set parent width */
+}
+
+.child {
+  width: calc(50% - 10px);
+}
+
+/* Using variables for better readability and maintainability */
+:root {
+  --container-width: 800px;
+  --margin: 20px;
+}
+
+.example3 {
+  width: calc(var(--container-width) - var(--margin));
+} 
